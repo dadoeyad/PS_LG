@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Template</title>
+  </head>
+  <body>
+    <h1>Logy!</h1>
+    <div class="panel panel-default">
+      <div id="line" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+      <div id="pie" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script>
+      var json_url = '{{ url_for('data', filename='data_cleaned.json') }}';
+    </script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+  </body>
+</html>
